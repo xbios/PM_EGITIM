@@ -5,7 +5,7 @@ import NProgress from "nprogress/nprogress.js";
 // Main layout variations
 import LayoutSimple from "@/layouts/variations/Simple.vue";
 
-import LayoutLanding from "@/layouts/variations/Landing.vue";
+//import LayoutLanding from "@/layouts/variations/Landing.vue";
 //import LayoutLanding from "@/layouts/variations/Backend.vue";
 
 import LayoutBackend from "@/layouts/variations/Backend.vue";
@@ -14,7 +14,7 @@ import LayoutBackendMegaMenu from "@/layouts/variations/BackendMegaMenu.vue";
 import LayoutBackendSidebarMiniNav from "@/layouts/variations/BackendSidebarMiniNav.vue";
 
 // Frontend: Landing
-const Landing = () => import("@/views/landing/LandingView.vue");
+//const Landing = () => import("@/views/landing/LandingView.vue");
 //const Landing = () => import("@/views/backend/DashboardView.vue");
 
 // Backend Boxed: Dashboard
@@ -179,14 +179,25 @@ const routes = [
   |--------------------------------------------------------------------------
   |
   */
+  // {
+  //   path: "/",
+  //   component: LayoutLanding,
+  //   children: [
+  //     {
+  //       path: "",
+  //       name: "landing",
+  //       component: Landing,
+  //     },
+  //   ],
+  // },
   {
     path: "/",
-    component: LayoutLanding,
+    component: LayoutBackend,
     children: [
       {
         path: "",
         name: "landing",
-        component: Landing,
+        component: BackendDashboard,
       },
     ],
   },
@@ -288,6 +299,11 @@ const routes = [
         path: "dashboard",
         name: "backend-dashboard",
         component: BackendDashboard,
+      },
+      {
+        path: "egitim",
+        name: "egitim-liste",
+        component: BackendTablesResponsive,
       },
 
       /*

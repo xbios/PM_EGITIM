@@ -13,6 +13,11 @@ export default {
       to: "backend-dashboard",
       icon: "si si-speedometer",
     },
+    {
+      name: "Eğitim",
+      to: "egitim-liste",
+      icon: "si si-speedometer",
+    },
     // You can also set an external link to your main navigation and it will render as a link
     // {
     //   name: "Link Name",
